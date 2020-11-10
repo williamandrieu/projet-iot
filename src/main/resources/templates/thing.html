@@ -1,0 +1,14 @@
+#parse("base.html")
+#@mainLayout()
+<h1>Thing $light.getName()</h1>
+
+<a href="/thing/$id?action=toggle" >
+    #if ($light.isLightOn())
+        Eteindre
+    #else
+        Allumer
+    #end
+</a>
+
+
+#end

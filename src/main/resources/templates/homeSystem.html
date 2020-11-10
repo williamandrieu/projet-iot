@@ -1,0 +1,28 @@
+#parse("base.html")
+#@mainLayout()
+<h1>Home System</h1>
+<table>
+    <thead></thead>
+    <tr>
+        <th>ID</th>
+        <th>Type</th>
+        <th>Name</th>
+        <th>State</th>
+        <th>Description</th>
+    </tr>
+    <tbody>
+    #foreach ($t in $things)
+
+    <td>
+        <a href="thing/$velocityCount">$velocityCount</a>
+    </td>
+    <td>$t.getTypeName()</td>
+    <td>$t.getName()</td>
+    <td>$t.getState().name()</td>
+    <td>$t.getDescription()</td>
+    </tr>
+    #end
+    </tbody>
+</table>
+
+#end
